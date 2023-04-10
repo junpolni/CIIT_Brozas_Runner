@@ -6,6 +6,12 @@ using UnityEngine;
 public class Collectibles : MonoBehaviour
 {
     public int balloonCount;
+    private Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     public void OnTriggerEnter(Collider col)
     {
@@ -15,6 +21,9 @@ public class Collectibles : MonoBehaviour
 
             Debug.Log("Balloon collected");
             balloonCount = balloonCount + 1;
+
+            anim.SetBool("isCrawling", false);
+
             Destroy(col.gameObject);
         }
     }
