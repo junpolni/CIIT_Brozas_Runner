@@ -510,6 +510,8 @@ GameObject:
   - component: {fileID: 989430870447163615}
   - component: {fileID: 8936939199504412146}
   - component: {fileID: 685089559633549707}
+  - component: {fileID: 1563009608}
+  - component: {fileID: 1563009604}
   m_Layer: 0
   m_Name: Obstacle_1
   m_TagString: Untagged
@@ -524,8 +526,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2776285725457101866}
-  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.00000059604645, z: -14}
+  m_LocalRotation: {x: 0.00000008203938, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -0, z: -16.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -583,6 +585,40 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1563009608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776285725457101866}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1562319, y: 1.4954618, z: 3.384837}
+  m_Center: {x: -0.000000059604645, y: 0.7477315, z: -1.3924185}
+--- !u!114 &1563009604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776285725457101866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec5dc0aaaf21be459e972c02b9f83fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRotate: 1
+  Rotation: {x: 0, y: 3600, z: 0}
+  Duration: 10
+  LoopCount: -1
+  Loop: 2
+  canMove: 0
+  StartPosition: {x: 0, y: 0, z: 0}
+  EndPosition: {x: 0, y: 0, z: 0}
+  LRDuration: 0
 --- !u!1 &2865627763860290798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,10 +1048,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ec5dc0aaaf21be459e972c02b9f83fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canRotate: 0
   Rotation: {x: 0, y: 3600, z: 0}
   Duration: 10
   LoopCount: -1
   Loop: 2
+  canMove: 0
   StartPosition: {x: 0, y: 0, z: -6.17}
   EndPosition: {x: 0, y: 0, z: -11.9}
   LRDuration: 2
@@ -1044,7 +1082,7 @@ Transform:
   m_GameObject: {fileID: 5549037295882841071}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6750147952674134704}
